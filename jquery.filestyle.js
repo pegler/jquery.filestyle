@@ -19,7 +19,8 @@
             width : 250,
             buttonText: 'Choose File',
             width: 88,
-            height: 28
+            height: 28,
+            tabIndex: false
         };
                 
         if(options) {
@@ -58,7 +59,11 @@
                                 "line-height": settings.height + 'px'
                 });
             }
-                            
+
+            if (settings.tabIndex != false) {
+                button.attr('tabIndex', settings.tabIndex)   
+            }
+
             var filename = $('<input class="file" READONLY/>')
                              .addClass($(self).attr("class"))
                              .css({
