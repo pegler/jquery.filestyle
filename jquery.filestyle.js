@@ -66,6 +66,7 @@
 
             var filename = $('<input class="file" READONLY/>')
                              .addClass($(self).attr("class"))
+                             .attr('tabIndex', 999)
                              .css({
                                  "display": "inline",
                              }).addClass('fileName');
