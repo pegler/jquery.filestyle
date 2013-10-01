@@ -18,6 +18,7 @@
         var settings = {
             width : 250,
             buttonText: 'Choose File',
+            buttonClass: "fileButton",
             width: 88,
             height: 28,
             tabIndex: false
@@ -37,7 +38,7 @@
             
             var button = $("<div>").css({
             	"position": "relative"
-            }).addClass('fileButton');
+            }).addClass(settings.buttonClass);
             if (settings.image) {
             	button.css({
                                 "width": settings.width + "px",
